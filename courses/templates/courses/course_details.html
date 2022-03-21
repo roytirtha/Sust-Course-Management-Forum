@@ -1,0 +1,47 @@
+{% extends "scmfal/base1.html" %}
+{% block content %}
+<div class="ibox-content m-b-sm border-bottom">
+    <div class="p-xs">
+        <div class="pull-left m-r-md">
+            <i class="fa fa-globe text-navy mid-icon"></i>
+        </div>
+        <h4>Welcome to {{context.course_name}} discussion forum</h4>
+        <h4>Course Teacher: {{context.teacher_name}}</h4>
+        <span>Feel free to post anything related to {{context.course_name}}.</span>
+    </div>
+</div>
+
+
+
+<a href="http://127.0.0.1:8000/courses/availableClasses/sdk/sdk1/sdk2/{{i.id}}">{{i.id}}</a>
+
+
+<section>
+    <p style="color:red;font-size:25px;"> Recent Posts <p>
+    <div class="container">
+       
+        <div class="row">
+            {% for i,j in context3 %}
+            <div class="col-sm-5 col-md-6 col-12 pb-4">
+               
+                <a href="http://127.0.0.1:8000/courses/availableClasses/sdk/sdk1/sdk2/{{i.id}}">
+                   <img src="{{j}}" width="50">
+                    <h4>{{i.author}}</h4> <span>{{i.post_date}}</span> <br>
+                    <h5>Post Topic: {{i.title}}</h5>
+                    <p>{{i.body}}</p>
+                    {% if i.add_image.url != None %}
+                    <p><img src="{{i.add_image.url}}" width="155"></p>
+                    {% endif %}
+                </div>
+            </a>
+                {% endfor %}
+            </div>
+            
+        </div>
+        <p style="font-size:25px;"><a href="http://127.0.0.1:8000/courses/availableClasses/classname/createPost/sdk/sdk1/{{context.course_name}}">Want to make a post?</a></p>
+    </div>
+    
+</section>
+
+
+{% endblock content %}

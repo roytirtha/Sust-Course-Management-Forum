@@ -1,0 +1,106 @@
+{% extends "scmfal/base1.html" %}
+{% block content %}
+<!--{% for i in context|dictsortreversed:"c_score"%}
+{{i.user}}  {{i.c_score}}<br>
+{% endfor %}
+
+{% with ''|center:context1 as range %}
+{% for _ in range %}
+    a = {{ forloop.counter }}
+    {{ break }}
+{% endfor %}
+{{a}}
+{% endwith %} -->
+
+<!--<section>
+    
+    <div class="container">
+        <h1 class="heading-section">Current Leaderboard</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-wrap">
+                    <table>
+                       
+                      <thead>
+                        
+                        <tr>
+                          
+                          <th>Profile Name</th>
+                          <th>Score</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                        {% for i in context|dictsortreversed:"c_score"%}
+                        <tr>
+                         
+                          <td>{{i.user}}</td>
+                          <td>{{i.c_score}}</td>
+                         
+                        </tr>
+                        {% endfor %}
+                        
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section> -->
+    {% for i in '0123456789'|make_list %}
+    
+    
+{% endfor %}
+   
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h3 class="h5 mb-4 text-center">Top 5 </h3>
+            <div class="table-wrap">
+              <table class="table">
+                <thead class="thead-primary">
+                  
+                  <tr>
+                    
+                    <th>Profile Name</th>
+                    <th>Score</th>
+                    
+                    
+                  </tr>
+                  
+                </thead>
+                <tbody>
+                  {% for i in context%}
+                  <tr class="alert" role="alert">
+                   
+                    <td>
+                      <div class="email">
+                        <span>{{i.user}} </span>
+                        
+                      </div>
+                    </td>
+                    <td>{{i.c_score}}</td>
+                    
+                    
+                  </tr>
+                  {% endfor %}
+                 
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+{% endblock content %}

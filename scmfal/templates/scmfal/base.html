@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+       
+        <link rel="stylesheet" type="text/css" href="{% static 'scmfal/main.css' %}">
+        
+    
+            
+        
+            <title>Course Management Forum</title>
+            
+            
+    </head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+          <div class="container">
+            <a class="navbar-brand mr-4" href="{% url 'leaderBoard' %}">LeaderBoard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggle">
+              <div class="navbar-nav mr-auto">
+                <a class="nav-item nav-link" href="{% url 'course-home' %}">Home</a>
+               
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   Courses
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    
+                    <a class="dropdown-item" href="{% url 'course_list' %}">CSE</a>
+                    
+                    <a class="dropdown-item" href="#">SWE</a>
+      
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Navbar Right Side -->
+    
+              <div class="navbar-nav">
+                {% if user.is_authenticated %}
+                <a class="nav-item nav-link" href="{% url 'notifications' %}">Notification</a>
+                  <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+                  <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                {% else %}
+                  <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                  <a class="nav-item nav-link" href="{% url 'int_register' %}">Sign Up</a>
+                {% endif %}
+                
+                
+                  
+                
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      
+      
+     
+        
+          <div>
+            <img src="{% static 'scmfal/images/home-bg.jpg' %}" class="img-fluid">
+            
+            <h1 style="color:black;font-weight: bolder;font-size:35px;font-family: sans-serif;font-style: inherit";>Welcome To Course Discussion Forum</h1>
+                
+                
+           
+          </div>
+          
+          
+          
+      
+      <main role="main" class="container">
+        
+        <div class="row">
+          <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+          </div>
+          
+        </div>
+      </main>
+    
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  
+  </script>  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

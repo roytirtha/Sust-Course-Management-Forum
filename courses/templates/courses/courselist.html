@@ -1,0 +1,38 @@
+{% extends "scmfal/base1.html" %}
+{% block content %}
+<div class="container mt-5">
+<div class="row text-center">
+ 
+{% for i,j in context2 %}
+
+  <div class="col-md-4">
+
+<div class="card p-3">
+  <div class="d-flex flex-row mb-3"><img src="{{j}}" width="70">
+    <div class="d-flex flex-column ml-2">{{i.teacher_name}}</div>
+    
+  </div>
+<h6>Course Name: <b>{{i.course_name}}</b></h6>
+<div class="d-flex justify-content-between install mt-3"><span>Course Code: <b>{{i.course_code}}</b></span><span class="text-primary"><a href="http://127.0.0.1:8000/courses/availableClasses/{{i.course_name}}">View&nbsp;</a><i class="fa fa-angle-right"></i></span></div>
+      <!--<a href="http://127.0.0.1:8000/courses/availableClasses/{{i.course_name}}"> 
+      <h5 class="card-title">Course Name: {{i.course_name}}</h5>
+      <h5 class="card-title">Course Code: <b>{{i.course_code}}</b></h5>
+      <h5 class="card-title">Teacher:<b> {{i.teacher_name}}</b></h5>
+      <h5 class="card-title">Description: </h5><p class="card-text">{{i.course_description}}</p>
+      </a>-->
+    
+  </div>
+
+</div>
+
+  {% endfor %}
+</div>
+</div>
+  
+  
+ 
+{% if context1 == 1 %}  
+<button class = "btn btn-outline-primary btn-lg" style="margin-left:325px;" name="button" type="submit" onClick="location.href='http://127.0.0.1:8000/courses/availableClasses/course_add/course'"> ADD</button>
+{% endif %}
+</section>
+{% endblock content %}
