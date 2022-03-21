@@ -1,8 +1,8 @@
 # Sust-Course-Management-Forum-And-Leaderboard
-This is a web application that is made in Django Framework. This application has two type of users that is Student & Teacher. I have used an unique field so that any user can not registered as teacher. The teachers take their code form the super admin who is randomly generated the code and put this code in the  registration form to register as a teacher. The teacher can create any discussion forum but the student cant. The Add button will only visible to teachers while creating the discussion forum. The students can't see this button. 
+This is a web application that is made in Django Framework. This application has two types of users which are the Student & the Teacher. I have used an unique field so that any user can not register as a teacher. The teachers take their code form the super admin, who randomly generates the code, and put this code in the  registration form to register as a teacher. The teacher can create any discussion forum but the student cannot. The Add button will only be visible to teachers while creating the discussion forum. The students cannot see this button. 
 
-The Student or Teacher can create a post and comment a post. Other user can give points to any comment (only one time). And based on this points, I make leaderboard to show which user has the maximum contribution in giving answers to various posts. Also this application has a notification system that will notify any user if anyone make comments to any of his posts.
-# To run this you must installed python and virtual environmet to your system
+The Student or Teacher can create a post and comment on a post. Other users can give points to any comment (only one time). And based on these points, I made the leaderboard to show which user has the maximum contribution in giving answers to various posts. Also this application has a notification system that will notify any user if anyone comments any of his/her posts.
+# To run this, you must install python and virtual environmet on your system
 # Some Snapshots
 ![web2](https://user-images.githubusercontent.com/55923593/125628907-bdca9cac-12e2-4daa-b19e-57f5bb0ee30e.png)
 ![web5](https://user-images.githubusercontent.com/55923593/125628956-8d32ae39-e58b-4c18-866a-e9ff1cbd6b47.png)
